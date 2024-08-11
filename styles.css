@@ -1,0 +1,42 @@
+button {
+  margin: 10px;
+  padding: 10px 2px;
+  font-size: 14px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+#exportRulesButton, #importRulesButton {
+  background-color: #313131; 
+}
+
+#exportRulesButton:hover, #importRulesButton:hover {
+  background-color: #1f1f1f; 
+}
+
+#exportRulesButton:active, #importRulesButton:active {
+  background-color: #0e0e0e; 
+  transform: scale(0.98); 
+}
+
+#showDescriptionButton {
+  background-color: #313131;
+}
+
+#showDescriptionButton:hover {
+  background-color: #1f1f1f; 
+}
+
+#showDescriptionButton:active {
+  background-color: #0e0e0e; 
+  transform: scale(0.98); 
+}
+
+.button-container {
+  text-align: center; 
+  margin-bottom: 30px; 
+}
