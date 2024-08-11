@@ -1,22 +1,72 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8"/>
-  <link rel="icon" href="/find_and_replace.png"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <meta name="theme-color" content="#000000"/>
-  <link rel="manifest" href="/manifest.json"/>
-  <title>REPLACER</title>
-  <style>
-    body{margin:0;padding:0}
-    .button-rules {
-      background-color: purple; /* Изменение цвета кнопок на фиолетовый */
-    }
-  </style>
-  <script defer="defer" src="/static/js/main.e4d49a11.js"></script>
-</head>
-<body>
-  <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div id="root"></div>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/find_and_replace.png" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>REPLACER</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      #exportRulesButton,
+      #importRulesButton {
+        margin: 10px;
+        padding: 5px 10px;
+        font-size: 14px;
+        background-color: #313131;
+        padding-bottom: 100 px;
+      }
+      #importRulesInput {
+        display: none;
+      }
+      #showDescriptionButton {
+        margin: 10px;
+        padding: 5px 10px;
+        font-size: 14px;
+      }
+      #descriptionOverlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        font-size: 13px;
+        padding-right: 20px;
+        padding: 20px;
+        overflow-y: auto;
+        z-index: 1000;
+      }
+      #capturedWrapperTextContainer {
+        border: 1px solid #ccc;
+        padding: 20px;
+        margin: 10px 20px;
+        background-color: #f9f9f9;
+        display: none;
+        font-family: "Helvetica Neue", Helvetica, "Open Sans", Arial, sans-serif;
+        font-size: 2px;
+      }
+    </style>
+    <script defer="defer" src="/static/js/main.e4d49a11.js"></script>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <div class="button-container">
+      <button id="exportRulesButton">Export Rules</button>
+      <button id="importRulesButton">Import Rules</button>
+      <input type="file" id="importRulesInput" accept=".json" />
+      <button id="showDescriptionButton">Show Description</button>
+    </div>
+    <div id="descriptionOverlay"></div>
+    <div id="copiedTextContainer"></div>
+    <script src="content.js"></script>
+  </body>
 </html>
