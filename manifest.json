@@ -1,7 +1,7 @@
 {
   "update_url": "https://clients2.google.com/service/update2/crx",
   "name": "REPLACER",
-  "description": "A tool that help you find and replace text.",
+  "description": "A tool that helps you find and replace text.",
   "version": "2.9",
   "manifest_version": 3,
   "permissions": ["tabs", "activeTab", "scripting", "storage", "sidePanel", "contextMenus"],
